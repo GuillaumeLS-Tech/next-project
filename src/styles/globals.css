@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,10 +14,132 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #F8EFBA;
 }
+
+
+/* Ici le style de ma wishlist */
+
+.addFilms{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 80px 0 40px 0;
+}
+
+.titreAccroche{
+  width: 80%;
+  margin-bottom: 80px;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #f49236;
+  margin: 0 auto 80px auto;
+}
+
+.addFilms input{
+  outline: none;
+  padding: 5px 0 5px 5px;
+}
+
+.addFilms button{
+  background: beige;
+  padding: 8px;
+  display: inline-block;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.addFilms button span{
+  display: block;
+}
+
+.addFilms button::before, .addFilms button::after{
+  content:"";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #fff;
+}
+
+span::before, span::after{
+  content:"";
+  width:3px;
+  height:0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #fff;
+}
+
+.addFilms button:hover::before, button:hover::after{
+  width: 100%;
+}
+.addFilms button:hover span::before, button:hover span::after{
+  height: 100%;
+}
+
+.addFilms button::before, .addFilms button::after{
+  transition-delay: 0s;
+}
+.addFilms button span::before, .addFilms button span::after{
+  transition-delay: 0.2s;
+}
+.addFilms button::before{
+  right: 0;
+  top: 0;
+}
+.addFilms button::after{
+  left: 0;
+  bottom: 0;
+}
+.addFilms button span::before{
+  left: 0;
+  top: 0;
+}
+.addFilms button span::after{
+  right: 0;
+  bottom: 0;
+}
+.addFilms button:hover::before, .addFilms button:hover::after{
+  transition-delay: 0.2s;
+}
+.addFilms button:hover span::before, .addFilms button:hover span::after{
+  transition-delay: 0s;
+}
+
+.wishlist-container {
+  width: 80%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wishlist-container button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #2C3A4750;
+}
+
+td img{
+  width: 300px;
+}
+
+.centered-description {
+  text-align: left;
+  padding-left: 30px;
+  font-size: 15px;
+}
+
+
